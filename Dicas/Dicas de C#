@@ -1,0 +1,21 @@
+//Trazendo diferentes resultados de instancias utilizando linq
+id = Convert.ToInt32(idDeAlgumLugar)
+using(PessoaEmpresa context)
+{
+  //Chama empresas
+  var empresa = context.pessoa.FirstOrDefault(x => x.pessoa_pk_id == id).pess_apelido;
+  //Chama pessoa_entidade
+  var pessoa_entidade = context.pessoa_entidade.FirstOrDefault(x => x.pessoa.pessoa_entidade.pessoa_pk_id == id).entidade.pessoa_juridica.pessoa.pess_apelido; 
+}
+
+//Adicionando filtro na sessão
+
+Session.add("descricao", txt.nome.text);
+
+//Retornando o filtro
+var descricao = session(descricrao).ToString()
+
+//Retornar outra pagina que está relacionado a uma controller diferente
+@await html.partialAsync("Controller/View.cshtml");
+
+
